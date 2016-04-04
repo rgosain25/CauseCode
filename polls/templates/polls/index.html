@@ -1,0 +1,52 @@
+<style>
+    body
+{
+	background-image: url("a.jpg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	font-family: "segoe ui";
+}
+form
+{
+	margin: 0 auto;
+	margin-top: 200px;
+	/* right left se automatically center */
+	padding: 20px;    /*margin top=200px */
+	/*padding=internal space*/
+	background-color: rgba(0,0,0,0.5);
+	width: 400px;
+	/*height: 600px; */
+}
+input
+{
+	font-family: inherit;
+	font-size: 28px;
+	display: block;
+	margin: 0 auto;
+	/*margin-bottom: 20px; */
+	background-color: black;
+	color: white;
+}
+.login
+{
+ margin-top: 20px;
+ color: white;
+ background-color: black;
+ padding-bottom: 5px;
+ border: 1px solid white;
+}
+</style>
+<html>
+<head>
+	<title>CauseCodeRound2</title>
+</head>
+<body>
+	<form action="/polls/1/" method="post">
+        {% csrf_token %}
+	<input name="phone_number" type="text" placeholder="PhoneNumber" class="un">
+	<textarea name="paragraph_text" cols="50" rows="5" placeholder="Enter Text" class="un"></textarea>
+	<input type="submit" value="Send Message" class="login">
+	</form>
+	
+</body>
+	</html>
