@@ -1,7 +1,13 @@
+<link rel="stylesheet"
+href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.c
+ss" integrity="sha384-1q8mTJOASx8j1Au
++a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+crossorigin="anonymous">
+
 <style>
     body
 {
-	background-image: url("a.jpg");
+	background-image: url("http://www.wallpapereast.com/static/images/Abstract-Digital-Art-Wallpaper.jpg");
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	font-family: "segoe ui";
@@ -9,7 +15,7 @@
 form
 {
 	margin: 0 auto;
-	margin-top: 200px;
+	margin-top: 50px;
 	/* right left se automatically center */
 	padding: 20px;    /*margin top=200px */
 	/*padding=internal space*/
@@ -35,17 +41,30 @@ input
  padding-bottom: 5px;
  border: 1px solid white;
 }
+    .heading
+    {
+        font-family: Calibri;
+        font-size:  40px;
+        color: blanchedalmond;
+        padding-top: 10%;
+    }
 </style>
 <html>
 <head>
 	<title>CauseCodeRound2</title>
 </head>
+<h1 align="center" class="heading">Hello! Welcome to Free Message Sender.</h1>
 <body>
-	<form action="/polls/1/" method="post">
+
+	<form  role="form" action="/polls/1/" method="post">
         {% csrf_token %}
+        <div class="form-group">
 	<input name="phone_number" type="text" placeholder="PhoneNumber" class="un">
-	<textarea name="paragraph_text" cols="50" rows="5" placeholder="Enter Text" class="un"></textarea>
-	<input type="submit" value="Send Message" class="login">
+            </div>
+    <div class="form-group">
+	<input name="paragraph_text" placeholder="Enter Text" class="un">
+	</div>
+        <input type="submit" value="Send Message" class=" btn btn-submit login">
 	</form>
 	
 </body>
